@@ -12,6 +12,7 @@
       width: 100px;
       height: 100px;
       background: skyblue;
+      color: white;
       cursor: pointer;
       transition: 0.8s;
       margin: 0 8px 8px 0;
@@ -42,7 +43,7 @@
     .sue {
       background: lightblue;
       border-radius: 50%;
-      transform: rotate(360deg);
+      transform: scale(0.9);
     }
     .kyo {
       background: indigo;
@@ -71,6 +72,7 @@
       
       div.addEventListener('click', () => {
         if (i === daikichi) {
+          alert("おめでとうございます！");
           div.textContent = '大吉!';
           div.classList.add('dai');
         } else if(i==chukichi){
@@ -82,12 +84,13 @@
         }else if(i==kichi){
           div.textContent = '吉!';
           div.classList.add('kiti');
-        }else if(i==suekichi){
-          div.textContent = '末吉';
-          div.classList.add('sue');
-        }else{
+        }else if(i==kyou){
+          alert("落ち込まないでください");
           div.textContent = '凶';
           div.classList.add('kyo');
+        }else{
+          div.textContent = '末吉';
+          div.classList.add('sue');
         }
       });
 
